@@ -1,7 +1,7 @@
 %define module	XML-DTDParser
 %define name	perl-%{module}
 %define version	2.01
-%define	release %mkrel 2
+%define	release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -26,6 +26,8 @@ etc. etc.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
