@@ -1,7 +1,7 @@
 %define module	XML-DTDParser
 %define name	perl-%{module}
 %define version	2.01
-%define	release %mkrel 3
+%define	release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
