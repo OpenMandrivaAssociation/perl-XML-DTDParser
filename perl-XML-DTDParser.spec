@@ -1,15 +1,13 @@
 %define upstream_name	 XML-DTDParser
-%define upstream_version 2.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	2.01
+Release:	6
 
 Summary:	Quick and dirty DTD parser
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/XML-DTDParser
-Source0:	https://cpan.metacpan.org/authors/id/J/JE/JENDA/XML-DTDParser-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JE/JENDA/XML-DTDParser-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ about all tags, their allowed parameters, children, parents, optionality etc.
 etc. etc.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -42,9 +40,7 @@ make test
 %changelog
 * Mon Aug 03 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 2.10.0-1mdv2010.0
 + Revision: 408233
-- rebuild using %%perl_convert_version
-
-* Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.01-7mdv2009.0
+- rebuild using %2.01 Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.01-7mdv2009.0
 + Revision: 258837
 - rebuild
 
